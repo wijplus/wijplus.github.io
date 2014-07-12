@@ -2,7 +2,7 @@
     <!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
     <!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
     <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!-->
-<html class="no-js" lang="en"><!--<![endif]-->
+<html lang="en" ng-app="WijplusApp"><!--<![endif]-->
     <head>
         <meta charset="utf-8">
         <title>Wijplus Restaurant Meerhoven</title>
@@ -12,8 +12,14 @@
 
         <!--<link rel="canonical" href="/"-->
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+        
         <script type="text/javascript" src="//code.jquery.com/jquery-1.10.1.min.js"></script>
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+        <script type="text/javascript" src="js/angular.min.js"></script>
+        <script type="text/javascript" src="js/angular-route.min.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+        
     </head>
     <body>
         <header role="banner">
@@ -49,7 +55,7 @@
                                 <li><a href="/menukaart">Menukaart</a></li>
                             </ul>
                         </li>
-                        <li><a href="./contact.html">Contact us</a></li>
+                        <li><a href="#/contact">Contact us</a></li>
                     </ul>
                     <ul class="nav navbar-nav pull-right">
                         <li class=""><a href="http://wijplus.com/" target="_blank">Old site</a></li>
@@ -57,44 +63,30 @@
                 </div>
             </div>
         </nav>
-        <div id="content" class="container-fluid">
-            <div class="row" style="height:300px;background-image:url('http://wijplus.com/templates/driverally/slideshow/2.jpg');backgroiund-repeat:no-repeat;background-size:cover;">
-                <div class="col-md-12">
-                    <h1 style="color:#eee">Wijplus restaurant Meerhoven</h1>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <p>The following reasons make Wijplus the best:</p>
-    
-                    <ul>
-                        <li>Good food</li>
-                        <li>Good location</li>
-                        <li>Good staff</li>
-                        <li>Good service</li>
-                    </ul>
-                </div>
-            </div>
-            <footer role="contentinfo">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <h3>Contact</h3>
-                            <ul class="">
-                                <li>Meerwater 12</li>
-                                <li>5658 LM, Eindhoven</li>
-                                <li>040 2351846</li>
-                            </ul>
-    
-                        </div>
-                        <div class="col-md-4">
-                            
-                        </div>
-                        <div class="col-md-4">
-                            <h3>Powered by</h3>
-                            <a href="http://www.baidu.com/">思灵</a>
+
+        <div ng-view></div>
+        
+        <footer role="contentinfo" style="margin-top: 10px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel panel-default">
+                          <div class="panel-heading">Contact</div>
+                          <div class="panel-body">
+                            Meerwater 12<br />
+                            5658 LM, Eindhoven<br />
+                            040 2351846
+                          </div>
                         </div>
                     </div>
-            </footer>
+                    <!--
+                    <div class="col-md-4">
+                        
+                    </div>
+                    <div class="col-md-4">
+                    </div>
+                    -->
+                </div>
+        </footer>
     </body>
 </html>
